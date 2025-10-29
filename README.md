@@ -36,6 +36,7 @@ Exports a project directory structure to JSON format.
 **Parameters:**
 - `project_path` (required): Path to the project directory to export
 - `include_hidden` (optional): Whether to include hidden files and directories (default: false)
+- `use_default_ignores` (optional): Whether to apply default ignore patterns when no .gitignore exists (default: true)
 
 **Example:**
 ```json
@@ -43,10 +44,15 @@ Exports a project directory structure to JSON format.
   "name": "export_project",
   "arguments": {
     "project_path": "/path/to/your/project",
-    "include_hidden": false
+    "include_hidden": false,
+    "use_default_ignores": true
   }
 }
 ```
+
+**Note:** If no `.gitignore` file exists:
+- With `use_default_ignores: true` (default): Built-in patterns still exclude common files/directories
+- With `use_default_ignores: false`: Everything will be packaged (except hidden files unless `include_hidden: true`)
 
 #### 2. import_project
 Imports/extracts a project structure from JSON data to a target directory.
