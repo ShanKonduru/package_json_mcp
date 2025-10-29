@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "project-packager": {
+      "command": "python",
+      "args": ["src/mcp_server.py"],
+      "cwd": "c:/MyProjects/package_json_mcp"
+    }
+  }
+}

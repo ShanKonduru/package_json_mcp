@@ -1,0 +1,3 @@
+@echo off
+echo Starting MCP Project Packager Server...
+python src\mcp_server.py

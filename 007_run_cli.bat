@@ -1,0 +1,3 @@
+@echo off
+echo Running MCP CLI Test...
+python cli.py %*
